@@ -8,5 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Teacher extends Model
 {
     use HasFactory;
-    protected $fillable=['name','email','phone','password'];
+    protected $fillable = [ 'name' , 'email' , 'phone' , 'password' ];
+
+
+
+    public function role()
+    {
+        return $this->belongsToMany(Classroom::class,'roles');
+    }
 }
