@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Istop;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 
-class IstopController extends Controller
+class ClassroomController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class IstopController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Istop  $istop
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function show(Istop $istop)
+    public function show(Classroom $classroom)
     {
         //
     }
@@ -52,10 +52,10 @@ class IstopController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Istop  $istop
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function edit(Istop $istop)
+    public function edit(Classroom $classroom)
     {
         //
     }
@@ -64,10 +64,10 @@ class IstopController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Istop  $istop
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Istop $istop)
+    public function update(Request $request, Classroom $classroom)
     {
         //
     }
@@ -75,10 +75,10 @@ class IstopController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Istop  $istop
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Istop $istop)
+    public function destroy(Classroom $classroom)
     {
         //
     }
