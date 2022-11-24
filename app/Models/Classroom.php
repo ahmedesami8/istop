@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\classroom;
 
 class Classroom extends Model
 {
@@ -11,9 +12,9 @@ class Classroom extends Model
     protected $fillable = [ 'name' , 'course_id' , 'teacher_id' , 'description' ];
 
 
-    public function classrooms()
+    public function Teachers()
     {
-        return $this->belongsToMany(Teacher::class,'roles');
+        return $this->belongsToOn(Teacher::class);
     }
 
 }

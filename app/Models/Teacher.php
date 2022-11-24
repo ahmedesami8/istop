@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Teacher;
 
 class Teacher extends Model
 {
@@ -12,8 +13,8 @@ class Teacher extends Model
 
 
 
-    public function role()
+    public function classrooms()
     {
-        return $this->belongsToMany(Classroom::class,'roles');
+        return $this->belongsToOn(Classroom::class);
     }
 }
