@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Teacher;
+use App\Models\classroom;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('istop', function () {
+    $istop=Classroom::find(2);
+    return $istop->teacher;
+
 });
