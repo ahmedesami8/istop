@@ -12,9 +12,9 @@ class Classroom extends Model
     protected $fillable = [ 'name' , 'course_id' , 'teacher_id' , 'description' ];
 
 
-    public function Teachers()
+    public function Teacher()
     {
-        return $this->belongsToOn(Teacher::class);
+        return $this->belongsToOne(Teacher::class);
     }
 
 }

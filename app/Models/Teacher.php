@@ -15,6 +15,6 @@ class Teacher extends Model
 
     public function classrooms()
     {
-        return $this->belongsToOn(Classroom::class);
+        return $this->belongsToOne(Classroom::class);
     }
 }
