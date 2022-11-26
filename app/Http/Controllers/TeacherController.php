@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Teacher;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Database\Seeder;
+
 
 class TeacherController extends Controller
 {
@@ -14,7 +17,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        return view('teacher');
+
     }
 
     /**
@@ -35,7 +39,18 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'role_id'=>
+        ]);
+        $user->save();
+        $teacher = new Teacher([
+            'phone'=>$request->phone,
+            'user_id'=>$user->id,
+        ]);
+        $teacher->save();
     }
 
     /**

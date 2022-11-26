@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Teacher;
 use App\Models\classroom;
+use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('istop', function () {
-    $istop=Classroom::find(2);
-    return $istop->teacher;
+ Route::resource('register',TeacherController::class);
 
-});
+
+
+
