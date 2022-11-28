@@ -15,7 +15,7 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('roles')->insert([
 
             'name' => 'Super Admin',
             'rank'=>'1'

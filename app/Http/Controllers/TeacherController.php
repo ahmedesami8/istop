@@ -43,7 +43,7 @@ class TeacherController extends Controller
             'name'=>$request->name,
             'email'=>$request->email,
             'password'=>$request->password,
-            'role_id'=>
+            'role_id'=>$request->role_id,
         ]);
         $user->save();
         $teacher = new Teacher([
