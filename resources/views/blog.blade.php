@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>iStop The Bleed (DEMO) | Contact Us</title>
+<title>iStop The Bleed (DEMO) | Blog</title>
 
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -76,8 +76,8 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="classes.html">Classes</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li class="current"><a href="contact.html">Contact Us</a></li>
+                                <li class="current"><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                                 <li><a href="teacher.html">Teacher</a></li>
                                 <li><a href="student.html">Student</a></li>
                             </ul>
@@ -141,86 +141,154 @@
     </header>
     <!--End Main Header -->
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="small-container">
-            <div class="sec-title text-center">
-                <span class="sub-title">Contact Now</span>
-                <h2>Write us a Message !</h2>
-                <span class="divider"></span>
-            </div>
-
-            <!-- Contact box -->
-            <div class="contact-box">
-                <div class="row">
-                    <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <span class="icon flaticon-worldwide"></span>
-                            <h4><strong>Address</strong></h4>
-                            <p>185, Pickton Near Street, <br>Los Angeles, USA</p>
-                        </div>
+    <!-- Blog Section -->
+    <section class="blog-section blog-checkerboard">
+        <div class="auto-container">
+            <!-- News Block -->
+            <div class="news-block-three">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="blog-post-image.html"><img src="images/resource/blog-1.jpg" alt=""></a></figure>
+                        <a href="#" class="date">June 9, 2020</a>
                     </div>
-
-                    <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <span class="icon flaticon-phone"></span>
-                            <h4><strong>Phone</strong></h4>
-                            <p><a href="#">(+92) 313 888 000</a></p>
-                            <p><a href="#">(+92) 313 999 000</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner">
-                            <span class="icon flaticon-email"></span>
-                            <h4><strong>Email</strong></h4>
-                            <p><a href="mailto:support@example.com">support@example.com</a></p>
-                            <p><a href="mailto:support@example.com">support@example.com</a></p>
+                    <div class="content-box">
+                        <h4><a href="blog-post-image.html">Diagnostic Services for Efficient <br>Results Picking Right</a></h4>
+                        <div class="text">Suspendisse potenti. Quisque risus sem, volutpat a sapien et, mattis condimentum est. Suspendisse feugiat cursus turpis, et porta lectus euismod accumsan. Nam felis ipsum, eleifend.</div>
+                        <a href="blog-post-image.html" class="theme-btn btn-style-one read-more"><span class="btn-title">Read More</span></a>
+                        <div class="post-info">
+                            <div class="post-author">By <a href="#">Admin Rose</a></div>
+                            <ul class="post-option">
+                                <li><a href="#">0 <i class="far fa-heart"></i></a></li>
+                                <li><a href="#">0 <i class="far fa-comments"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Form box -->
-            <div class="form-box">
-                <div class="contact-form">
-                    <form action="#" method="post" id="email-form">
-                        <div class="row">
-                            <div class="form-group col-lg-12">
-                                <div class="response"></div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" name="username" class="username" placeholder="Full Name *">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" name="email" class="email" placeholder="Email Address *">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" name="username" class="username" placeholder="Your Phone">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <textarea name="contact_message" class="message" placeholder="Massage"></textarea>
-                                </div>
-
-                            </div>
-
-                            <div class="form-group col-lg-12 text-center pt-3">
-                                <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form"><span class="btn-title">Send Message</span></button>
-                            </div>
+            <!-- News Block -->
+            <div class="news-block-three even">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="blog-post-image.html"><img src="images/resource/blog-2.jpg" alt=""></a></figure>
+                        <a href="#" class="date">June 9, 2020</a>
+                    </div>
+                    <div class="content-box">
+                        <h4><a href="blog-post-image.html">Preparing for an ECG Tips From <br> Our Diagnosticians.</a></h4>
+                        <div class="text">Suspendisse potenti. Quisque risus sem, volutpat a sapien et, mattis condimentum est. Suspendisse feugiat cursus turpis, et porta lectus euismod accumsan. Nam felis ipsum, eleifend.</div>
+                        <a href="blog-post-image.html" class="theme-btn btn-style-one read-more"><span class="btn-title">Read More</span></a>
+                        <div class="post-info">
+                            <div class="post-author">By Admin Rose</div>
+                            <ul class="post-option">
+                                <li><a href="#">0 <i class="far fa-heart"></i></a></li>
+                                <li><a href="#">0 <i class="far fa-comments"></i></a></li>
+                            </ul>
                         </div>
-                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Block -->
+            <div class="news-block-three">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="blog-post-image.html"><img src="images/resource/blog-3.jpg" alt=""></a></figure>
+                        <a href="#" class="date">June 9, 2020</a>
+                    </div>
+                    <div class="content-box">
+                        <h4><a href="blog-post-image.html">Diagnostic Services for Efficient <br>Results Picking Right?</a></h4>
+                        <div class="text">Suspendisse potenti. Quisque risus sem, volutpat a sapien et, mattis condimentum est. Suspendisse feugiat cursus turpis, et porta lectus euismod accumsan. Nam felis ipsum, eleifend.</div>
+                        <a href="blog-post-image.html" class="theme-btn btn-style-one read-more"><span class="btn-title">Read More</span></a>
+                        <div class="post-info">
+                            <div class="post-author">By Admin Rose</div>
+                            <ul class="post-option">
+                                <li><a href="#">0 <i class="far fa-heart"></i></a></li>
+                                <li><a href="#">0 <i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Block -->
+            <div class="news-block-three even">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="blog-post-image.html"><img src="images/resource/blog-4.jpg" alt=""></a></figure>
+                        <a href="#" class="date">June 9, 2020</a>
+                    </div>
+                    <div class="content-box">
+                        <h4><a href="blog-post-image.html">Diagnostic Services for Efficient <br>Results Picking Right?</a></h4>
+                        <div class="text">Suspendisse potenti. Quisque risus sem, volutpat a sapien et, mattis condimentum est. Suspendisse feugiat cursus turpis, et porta lectus euismod accumsan. Nam felis ipsum, eleifend.</div>
+                        <a href="blog-post-image.html" class="theme-btn btn-style-one read-more"><span class="btn-title">Read More</span></a>
+                        <div class="post-info">
+                            <div class="post-author">By Admin Rose</div>
+                            <ul class="post-option">
+                                <li><a href="#">0 <i class="far fa-heart"></i></a></li>
+                                <li><a href="#">0 <i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Block -->
+            <div class="news-block-three">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="blog-post-image.html"><img src="images/resource/blog-5.jpg" alt=""></a></figure>
+                        <a href="#" class="date">June 9, 2020</a>
+                    </div>
+                    <div class="content-box">
+                        <h4><a href="blog-post-image.html">Reasons to Visit for Heart <br>Specialist Department.</a></h4>
+                        <div class="text">Suspendisse potenti. Quisque risus sem, volutpat a sapien et, mattis condimentum est. Suspendisse feugiat cursus turpis, et porta lectus euismod accumsan. Nam felis ipsum, eleifend.</div>
+                        <a href="blog-post-image.html" class="theme-btn btn-style-one read-more"><span class="btn-title">Read More</span></a>
+                        <div class="post-info">
+                            <div class="post-author">By Admin Rose</div>
+                            <ul class="post-option">
+                                <li><a href="#">0 <i class="far fa-heart"></i></a></li>
+                                <li><a href="#">0 <i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Block -->
+            <div class="news-block-three even">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="blog-post-image.html"><img src="images/resource/blog-6.jpg" alt=""></a></figure>
+                        <a href="#" class="date">Sep 19, 2020</a>
+                    </div>
+
+                    @include('parts2.post')
+
+
                 </div>
             </div>
         </div>
     </section>
-    <!--End Contact Section -->
+    <!--End Blog Section -->
+
+    <!-- Clients Section -->
+    <section class="clients-section alternate">
+        <div class="auto-container">
+
+            <!-- Sponsors Outer -->
+            <div class="sponsors-outer">
+                <!--clients carousel-->
+                <ul class="clients-carousel owl-carousel owl-theme">
+                    <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
+                    <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
+                    <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
+                    <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
+                    <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Clients Section -->
 
     <!-- Main Footer -->
     <footer class="main-footer style-two">
@@ -371,11 +439,6 @@
 <script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Google Map APi Key-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaaCBm4FEmgKs5cfVrh3JYue3Chj1kJMw"></script>
-<script src="js/map-script.js"></script>
-<!--End Google Map APi-->
-
 </body>
 </html>
 

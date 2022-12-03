@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
- Route::resource('register',TeacherController::class);
+ Route::resource('/register',TeacherController::class);
 
 
 
