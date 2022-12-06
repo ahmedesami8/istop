@@ -9,13 +9,13 @@ use App\Models\Teacher;
 class Teacher extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'name' , 'email' , 'phone' , 'password' ];
+    protected $fillable = [ 'phone' , 'password','user_id' ];
 
 
 
     public function classrooms()
     {
-        return $this->belongsTo(Classroom::class);
+        return $this->hasOne(Classroom::class);
     }
 
 }

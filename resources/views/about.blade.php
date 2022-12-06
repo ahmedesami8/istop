@@ -30,39 +30,39 @@
     <div class="preloader"></div>
 
     <!-- Main Header-->
-    @include('parts2.navbar')
+    @include('parts.navbar')
     <!--End Main Header -->
 
      <!-- About Section -->
-     @include('parts2.About')
+     @include('parts.About')
     <!-- End About Section -->
 
     <!-- Fun Fact Section Two-->
-    @include('parts2.Fun')
+    @include('parts.Fun')
     <!-- Fun Fact Section Two -->
 
     <!-- Appointment Section Three -->
-    @include('parts2.Appointment')
+    @include('parts.Appointment2')
     <!--End Appointment Section Three -->
 
     <!-- Team Section Two -->
-    @include('parts2.Team')
+    @include('parts.Team')
     <!--End Team Section -->
 
     <!-- Skill Section -->
-    @include('parts2.Skill')
+    @include('parts.Skill')
     <!--End Skill Section -->
 
     <!-- Testimonial Section -->
-    @include('parts2.Testimonial')
+    @include('parts.Testimonial')
     <!-- End Testimonial Section -->
 
     <!-- Clients Section -->
-    @include('parts2.Clients')
+    @include('parts.Clients')
     <!--End Clients Section -->
 
     <!-- Main Footer -->
-    @include('parts2.Footer')
+    @include('parts.Footer')
     <!--End Main Footer -->
 
 </div><!-- End Page Wrapper -->

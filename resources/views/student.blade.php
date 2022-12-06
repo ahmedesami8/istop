@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>iStop The Bleed (DEMO) | Teacher Appoinment</title>
+<title>iStop The Bleed (DEMO) | Student Appoinment</title>
 
 <!-- Stylesheets -->
-<link href={{asset('css/bootstrap.css')}} rel="stylesheet">
-<link href={{asset('css/style.css')}} rel="stylesheet">
-<link href={{asset('css/responsive.css')}} rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
 
 <!--Color Themes-->
-<link id="theme-color-file" href={{asset('css/color-themes/default-theme.css')}} rel="stylesheet">
+<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
 
-<link rel="shortcut icon" href={{asset('css/images/favicon.png')}} type="image/x-icon">
-<link rel="icon" href={{asset('css/images/favicon.png')}} type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,7 @@
     <section class="contact-section" id="contact">
         <div class="small-container">
             <div class="sec-title text-center">
-                <span class="sub-title">Teacher Appointment</span>
+                <span class="sub-title">Student Appointment</span>
                 <h2>Registration Now!</h2>
                 <span class="divider"></span>
             </div>
@@ -45,7 +45,7 @@
             <!-- Form box -->
             <div class="form-box">
                 <div class="contact-form">
-                    <form action="{{route('register.store')}}" method="post" id="email-form">
+                    <form action="{{route('studentadd.store')}}" method="post">
                         @csrf
                         <div class="row">
                             <div class="form-group col-lg-12">
@@ -54,25 +54,20 @@
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Full Name" required>
+                                    <input type="text" name="name" placeholder="Full Name">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email Address" required>
+                                    <input type="email" name="email" placeholder="Email Address">
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" name="phone" placeholder="Phone Number" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="password" name="password" placeholder="Password" required>
+                                    <input type="text" name="phone" placeholder="Phone Number">
                                 </div>
                             </div>
 
                             <div class="form-group col-lg-12 text-center pt-3">
-                                {{-- <button class="theme-btn btn-style-one" type="button" id="submit" ><span class="btn-title">Registration</span></button> --}}
-                                <button class="theme-btn btn-style-one" id="submit" >Registration</button>
+                                <button class="theme-btn btn-style-one" type="submit"><span class="btn-title">Registration</span></button>
                             </div>
                         </div>
                     </form>

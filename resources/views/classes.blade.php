@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>iStop The Bleed (DEMO) | Teacher Appoinment</title>
+<title>iStop The Bleed (DEMO) | Classes</title>
 
 <!-- Stylesheets -->
-<link href={{asset('css/bootstrap.css')}} rel="stylesheet">
-<link href={{asset('css/style.css')}} rel="stylesheet">
-<link href={{asset('css/responsive.css')}} rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
 
 <!--Color Themes-->
-<link id="theme-color-file" href={{asset('css/color-themes/default-theme.css')}} rel="stylesheet">
+<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
 
-<link rel="shortcut icon" href={{asset('css/images/favicon.png')}} type="image/x-icon">
-<link rel="icon" href={{asset('css/images/favicon.png')}} type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,54 +33,157 @@
     @include('parts.navbar')
     <!--End Main Header -->
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="small-container">
-            <div class="sec-title text-center">
-                <span class="sub-title">Teacher Appointment</span>
-                <h2>Registration Now!</h2>
-                <span class="divider"></span>
-            </div>
-
-            <!-- Form box -->
-            <div class="form-box">
-                <div class="contact-form">
-                    <form action="{{route('register.store')}}" method="post" id="email-form">
-                        @csrf
-                        <div class="row">
-                            <div class="form-group col-lg-12">
-                                <div class="response"></div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" name="name" placeholder="Full Name" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email Address" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" name="phone" placeholder="Phone Number" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="password" name="password" placeholder="Password" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group col-lg-12 text-center pt-3">
-                                {{-- <button class="theme-btn btn-style-one" type="button" id="submit" ><span class="btn-title">Registration</span></button> --}}
-                                <button class="theme-btn btn-style-one" id="submit" >Registration</button>
+    <!-- Blog Section -->
+    <section class="blog-section blog-two-col">
+        <div class="auto-container">
+            <div class="row">
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="blog-post-image.html"><img src="images/resource/news-2.jpg" alt=""></a></figure>
+                            <a href="#" class="date">Istanbul</a>
+                        </div>
+                        <div class="lower-content">
+                            <h4><a href="blog-post-image.html">Class Name</a></h4>
+                            <div class="text">Class Description</div>
+                            <div class="post-info">
+                                <a href="student.html" class="theme-btn btn-style-one"><span class="btn-title">Apply</span></a>
+                                <div class="post-author">Dr. Mhamed Bahnasy</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--End Contact Section -->
+    <!--End Blog Section -->
 
     <!-- Main Footer -->
     <footer class="main-footer style-two">
@@ -231,11 +334,6 @@
 <script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Google Map APi Key-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaaCBm4FEmgKs5cfVrh3JYue3Chj1kJMw"></script>
-<script src="js/map-script.js"></script>
-<!--End Google Map APi-->
-
 </body>
 </html>
 

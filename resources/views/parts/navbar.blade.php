@@ -41,13 +41,13 @@
                 <div class="nav-outer">
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
-                            <li class="current"><a href="index.html">Home</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="classes.html">Classes</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="teacher.html">Teacher</a></li>
-                            <li><a href="student.html">Student</a></li>
+                            <li class=" {{ (request()->is('/')) ? 'current':''}}"><a href="{{route('index')}}">Home</a></li>
+                            <li class="{{ (request()->is('about')) ? 'current':''}}"><a href="{{route('about')}}">About Us</a></li>
+                            <li class="{{ (request()->is('classes')) ? 'current':''}}"><a href="{{route('classes')}}">Classes</a></li>
+                            <li class="{{ (request()->is('blog')) ? 'current':''}}"><a href="{{route('blog')}}">Blog</a></li>
+                            <li class="{{ (request()->is('contact')) ? 'current':''}}"><a href="{{route('contact')}}">Contact Us</a></li>
+                            <li class="{{ (request()->is('teacher')) ? 'current':''}}"><a href="{{route('teacher')}}">Teacher</a></li>
+                            <li class="{{ (request()->is('student')) ? 'current':''}}"><a href="{{route('student')}}">Student</a></li>
                         </ul>
                     </nav>
                     <!-- Main Menu End-->
