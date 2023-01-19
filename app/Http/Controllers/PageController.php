@@ -42,4 +42,10 @@ class PageController extends Controller
 
     }
 
+    public function table_couse()
+    {
+        return view('pages.Allstudents');
+
+    }
+
 }

@@ -18,20 +18,20 @@ class RolesTableSeeder extends Seeder
         DB::table('roles')->insert([
 
             'name' => 'Super Admin',
-            'rank'=>'1'
+            'rank'=> 1
 
         ],[
             'name' => 'Admin',
-            'rank'=>'2'
+            'rank'=> 2
         ],[
             'name' => 'Manager',
-            'rank'=>'3'
+            'rank'=> 3
         ],[
             'name' => 'Teacher',
-            'rank'=>'4'
+            'rank'=> 4
         ],[
             'name' => 'Student ',
-            'rank'=>'5'
+            'rank'=> 5
         ]);
     }
 }

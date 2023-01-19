@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text('name');
             $table->integer('course_id');
-            $table->integer('teacher_id');
+            $table->integer('teachers_id');
             $table->text('description');
             $table->timestamps();
         });

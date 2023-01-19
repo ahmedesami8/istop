@@ -41,13 +41,13 @@
                 <div class="nav-outer">
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
-                            <li class=" {{ (request()->is('/')) ? 'current':''}}"><a href="{{route('index')}}">Home</a></li>
-                            <li class="{{ (request()->is('about')) ? 'current':''}}"><a href="{{route('about')}}">About Us</a></li>
-                            <li class="{{ (request()->is('classes')) ? 'current':''}}"><a href="{{route('classes')}}">Classes</a></li>
-                            <li class="{{ (request()->is('blog')) ? 'current':''}}"><a href="{{route('blog')}}">Blog</a></li>
-                            <li class="{{ (request()->is('contact')) ? 'current':''}}"><a href="{{route('contact')}}">Contact Us</a></li>
-                            <li class="{{ (request()->is('teacher')) ? 'current':''}}"><a href="{{route('teacher')}}">Teacher</a></li>
-                            <li class="{{ (request()->is('student')) ? 'current':''}}"><a href="{{route('student')}}">Student</a></li>
+                            <li class=" {{ (request()->is('/')) ? 'current':''}}"><a href="{{url('index')}}">Home</a></li>
+                            <li class="{{ (request()->is('about')) ? 'current':''}}"><a href="{{url('about')}}">About Us</a></li>
+                            <li class="{{ (request()->is('classes')) ? 'current':''}}"><a href="{{url('classes')}}">Classes</a></li>
+                            <li class="{{ (request()->is('blog')) ? 'current':''}}"><a href="{{url('blog')}}">Blog</a></li>
+                            <li class="{{ (request()->is('contact')) ? 'current':''}}"><a href="{{url('contact')}}">Contact Us</a></li>
+                            <li class="{{ (request()->is('teacher')) ? 'current':''}}"><a href="{{url('teacher')}}">Teacher</a></li>
+                            <li class="{{ (request()->is('student')) ? 'current':''}}"><a href="{{url('student')}}">Student</a></li>
                         </ul>
                     </nav>
                     <!-- Main Menu End-->

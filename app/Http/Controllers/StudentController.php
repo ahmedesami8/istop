@@ -15,8 +15,11 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $table_students=Student::all();
+        return view('pages.Allstudents',compact('table_students'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +28,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('studentsadd');
     }
 
     /**
@@ -67,9 +70,11 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit(Student $student,$id)
     {
-        //
+        $student = Student::find($id);
+        $user = User::find($id);
+        return view('pages.editstudents',['student'=>$student,'user'=>$user ]);
     }
 
     /**
@@ -79,9 +84,22 @@ class StudentController extends Controller
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, $id)
     {
-        //
+        $user=User::find($id);
+        $Student=Student::find($id);
+
+        $user->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>12345678,
+            'role_id'=>1,
+        ]);
+
+        $Student->update([
+            'phone'=>$request->phone,
+            'user_id'=>$user->id,
+        ]);
     }
 
     /**
@@ -92,6 +110,8 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+
+        Student::delete($id);
+        return redirect()->route('admin.coursesadd.index');
     }
 }

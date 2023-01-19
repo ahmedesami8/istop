@@ -1,0 +1,102 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Courses;
+use Illuminate\Http\Request;
+
+class CoursesController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $table_courses=Courses::all();
+        return view('pages.Allcourses',compact('table_courses'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('coursesadd');
+    }
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+
+        $Cours = new Courses([
+            'title'=>$request->title,
+            'price'=>$request->price,
+            'description'=>$request->description,
+
+        ]);
+        $Cours->save();
+        return $request->all();
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Courses  $courses
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Courses $courses)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Courses  $courses
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Courses $courses,$id)
+    {
+        $Courses = Courses::find($id);
+        return view('pages.editcourses',compact('Courses'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Courses  $courses
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $Courses=Courses::find($id);
+        $Courses->update([
+            'title'=>$request->title,
+            'price'=>$request->price,
+            'description'=>$request->description,
+        ]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Courses  $courses
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Courses::destroy($id);
+        return redirect()->route('admin.coursesadd.index');
+    }
+}

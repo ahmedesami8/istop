@@ -18,7 +18,11 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('index');
+
+        {
+            $table_teachers=Teacher::all();
+            return view('pages.Allteachers',compact('table_teachers'));
+        }
 
     }
 
@@ -29,7 +33,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        //
+        return view('teachersadd');
     }
 
     /**
@@ -52,6 +56,7 @@ class TeacherController extends Controller
             'user_id'=>$user->id,
         ]);
         $teacher->save();
+        return $request->all();
     }
 
     /**
@@ -71,9 +76,12 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function edit(Teacher $teacher)
+    public function edit(Teacher $teacher,$id)
     {
-        //
+        $teacher = Teacher::find($id);
+        $user = User::find($id);
+        return view('pages.edittaecher',['teacher'=>$teacher,'user'=>$user ]);
+
     }
 
     /**
@@ -83,9 +91,29 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Teacher $teacher)
+    public function update(Request $request, $id)
     {
-        //
+        $user=User::find($id);
+        $Teacher=Teacher::find($id);
+
+        $user->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'role_id'=>2,
+        ]);
+
+        $Teacher->update([
+            'phone'=>$request->phone,
+            'user_id'=>$user->id,
+        ]);
+
+
+
+
+
+
+
     }
 
     /**
@@ -94,8 +122,10 @@ class TeacherController extends Controller
      * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teacher $teacher)
+    public function destroy($id)
     {
-        //
+
+        Teacher ::destroy($id);
+        return redirect()->route('admin.teacheradd.index');
     }
 }

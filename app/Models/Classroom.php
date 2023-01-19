@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\classroom;
 
 class Classroom extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'name' , 'course_id' , 'teacher_id' , 'description' ];
+    protected $fillable = [ 'name' , 'course_id', 'description', 'teachers_id' ];
 
 
     public function teacher()
