@@ -45,7 +45,7 @@
             <!-- Form box -->
             <div class="form-box">
                 <div class="contact-form">
-                    <form action="{{route('register.store')}}" method="post" id="email-form">
+                    <form action="{{url('register.store')}}" method="post" id="email-form">
                         @csrf
                         <div class="row">
                             <div class="form-group col-lg-12">

@@ -45,7 +45,7 @@
             <!-- Form box -->
             <div class="form-box">
                 <div class="contact-form">
-                    <form action="{{route('studentadd.store')}}" method="post">
+                    <form action="{{url('dashboard/studentadd')}}" method="post">
                         @csrf
                         <div class="row">
                             <div class="form-group col-lg-12">
