@@ -38,13 +38,28 @@
                                     <td>{{$table_student->phone}}</td>
                                     <td>
 
-                                        <form action="{{url('dashboard/coursesadd',$table_student->id)}}" method="POST">
+                                        {{-- <form action="{{url('dashboard/coursesadd',$table_student->id)}}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <a class="btn btn-primary" href="{{route('admin.studentadd.edit',$table_student->id)}}" role="button">edit</a>
                                             <button type="submit" class="btn btn-primary">delete</button>
 
+                                        </form> --}}
+
+                                        <form action="{{url('dashboard/coursesadd',$table_student->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a rel="tooltip" class="btn btn-success btn-link"
+                                                    href="{{route('admin.studentadd.edit',$table_student->id)}}" data-original-title=""
+                                                    title="">
+                                                    <i class="material-icons">edit</i>
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            <button type="submit" class="btn btn-danger btn-link"><i class="material-icons">close</i>
+                                                <div class="ripple-container"></div></button>
+
                                         </form>
+
                                     </td>
 
 

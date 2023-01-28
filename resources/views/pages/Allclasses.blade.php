@@ -33,18 +33,38 @@
                                             <th class="text-secondary opacity-7"></th>
                                         </tr>
                                     </thead>
-                                </thead>
+
                                 @foreach($table_classes as $table_classe)
                                 <tr>
                                     <td>{{$table_classe->name}}</td>
-                                    <td>{{$table_classe->course_id}}</td>
-                                    <td>{{$table_classe->teacher_id}}</td>
+                                <td>
+                                    @foreach($courses as $course)
+                                    {{$course->title}}
+                                    @endforeach
+                                </td>
+                                <td>
+                                    @foreach($teachers as $teacher)
+                                    {{$teacher->user->name}}
+                                    @endforeach
+                                </td>
                                     <td>{{$table_classe->description}}</td>
-                                    <
-                                    <td>
+
+                                <td>
                                         {{-- <a class="btn btn-primary" href="{{route('admin.classesadd.edit',$table_classe->id)}}" role="button">edit</a> --}}
 
                                         {{-- <a class="btn btn-primary" href="{{route('admin.classesadd.destroy',$table_classe->id)}}" role="button">delete</a> --}}
+                                        {{-- <form action="{{url('dashboard/classesadd',$table_classe->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a rel="tooltip" class="btn btn-success btn-link"
+                                                    href="{{route('admin.classesadd.edit',$table_classe->id)}}" data-original-title=""
+                                                    title="">
+                                                    <i class="material-icons">edit</i>
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            <button type="submit" class="btn btn-danger btn-link"><i class="material-icons">close</i>
+                                                <div class="ripple-container"></div></button>
+                                        </form> --}}
                                         <form action="{{url('dashboard/classesadd',$table_classe->id)}}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -56,6 +76,7 @@
                                                 </a>
                                             <button type="submit" class="btn btn-danger btn-link"><i class="material-icons">close</i>
                                                 <div class="ripple-container"></div></button>
+
                                         </form>
                                     </td>
 

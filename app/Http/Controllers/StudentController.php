@@ -51,6 +51,7 @@ class StudentController extends Controller
             'user_id'=>$user->id,
         ]);
         $student->save();
+        return back();
     }
 
     /**
@@ -100,6 +101,7 @@ class StudentController extends Controller
             'phone'=>$request->phone,
             'user_id'=>$user->id,
         ]);
+        return back();
     }
 
     /**

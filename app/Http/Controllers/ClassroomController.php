@@ -19,7 +19,10 @@ class ClassroomController extends Controller
     public function index()
     {
         $table_classes=classroom::all();
-        return view('pages.Allclasses',compact('table_classes'));
+        $teachers = Teacher::get();
+        $courses = Courses::all();
+        // return view('pages.Allclasses',compact('table_classes'));
+        return view('pages.Allclasses',['teachers'=>$teachers,'courses'=>$courses,'table_classes'=>$table_classes]);
     }
 
     /**
@@ -53,6 +56,7 @@ class ClassroomController extends Controller
             'teachers_id'=>$request->teachers_id	,
         ]);
         $Classroom->save();
+        return back();
 
     }
 
@@ -99,6 +103,8 @@ class ClassroomController extends Controller
             'description'=>$request->description,
             'teachers_id'=>$request->teachers_id,
         ]);
+
+        return back();
     }
 
     /**

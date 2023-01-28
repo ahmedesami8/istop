@@ -18,7 +18,16 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Laravel examples</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
+                <a class="nav-link text-white {{ (request()->is('dashboard')) ? ' active bg-gradient-primary' : '' }} "
+                    href="{{ route('dashboard') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">dashboard</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ (request()->is('user-profile')) ? 'active bg-gradient-primary' : '' }} "
                     href="{{ route('user-profile') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
@@ -28,8 +37,8 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-management' ? ' active bg-gradient-primary' : '' }} "
-                    href="{{ route('user-management') }}">
+                <a class="nav-link text-white {{ (request()->is('user-management')) ? ' active bg-gradient-primary' : '' }} "
+                    href="{{url('dashboard/user-management') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i style="font-size: 1rem;" class="fas fa-lg fa-list-ul ps-2 pe-2 text-center"></i>
                     </div>
@@ -37,11 +46,11 @@
                 </a>
             </li>
             <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">USERS</h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">COURSES</h6>
             </li>
             @if(has_permission('admin'))
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
+                <a class="nav-link text-white {{ (request()->is('dashboard/coursesadd/create')) ? 'active bg-gradient-primary' : '' }} "
                     href="{{ url('dashboard/coursesadd/create') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
@@ -51,19 +60,43 @@
             </li>
             @endif
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-management' ? ' active bg-gradient-primary' : '' }} "
+                <a class="nav-link text-white {{ (request()->is('dashboard/table_courses')) ? ' active bg-gradient-primary' : '' }} "
                     href="{{ url('dashboard/table_courses') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i style="font-size: 1rem;" class="fas fa-lg fa-list-ul ps-2 pe-2 text-center"></i>
+                        <i class="material-icons opacity-10">table_view</i>
                     </div>
                     <span class="nav-link-text ms-1">All courses</span>
                 </a>
             </li>
             <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Pages</h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">TEACHER</h6>
+            </li>
+            @if(has_permission('admin'))
+            <li class="nav-item">
+                <a class="nav-link text-white {{ (request()->is('dashboard/teacheradd/create')) ? 'active bg-gradient-primary' : '' }} "
+                    href="{{ url('dashboard/teacheradd/create') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">create teacher</span>
+                </a>
+            </li>
+            @endif
+            <li class="nav-item">
+                <a class="nav-link text-white {{ (request()->is('dashboard/table_teacher')) ? ' active bg-gradient-primary' : '' }} "
+                    href="{{ url('dashboard/table_teacher') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">table_view</i>
+                    </div>
+                    <span class="nav-link-text ms-1">All teacher</span>
+                </a>
+                </a>
+            </li>
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">STUDENT</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
+                <a class="nav-link text-white {{ (request()->is('dashboard/studentadd/create')) ? 'active bg-gradient-primary' : '' }} "
                     href="{{ url('dashboard/studentadd/create') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
@@ -72,16 +105,20 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
-                    href="{{ url('dashboard/teacheradd/create') }}">
+                <a class="nav-link text-white {{ (request()->is('dashboard/table_student')) ? ' active bg-gradient-primary' : '' }} "
+                    href="{{ url('dashboard/table_student') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
+                        <i class="material-icons opacity-10">table_view</i>
                     </div>
-                    <span class="nav-link-text ms-1">create teacher</span>
+                    <span class="nav-link-text ms-1">All student</span>
+                </a>
                 </a>
             </li>
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">CLASSES</h6>
+            </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
+                <a class="nav-link text-white {{(request()->is('dashboard/classesadd/create')) ? 'active bg-gradient-primary' : '' }} "
                     href="{{ url('dashboard/classesadd/create') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
@@ -90,23 +127,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
+                <a class="nav-link text-white {{ (request()->is('dashboard/classesadd')) ? 'active bg-gradient-primary' : '' }} "
                     href="{{ url('dashboard/classesadd') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i style="font-size: 1.2rem;" class="fas fa-user-circle ps-2 pe-2 text-center"></i>
+                        <i class="material-icons opacity-10">table_view</i>
                     </div>
                     <span class="nav-link-text ms-1">All classes</span>
                 </a>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link text-white {{ $activePage == 'dashboard' ? ' active bg-gradient-primary' : '' }} "
-                    href="{{ route('dashboard') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">dashboard</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Dashboard</span>
-                </a>
-            </li> --}}
+
             {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'tables' ? ' active bg-gradient-primary' : '' }} "
                     href="{{ route('tables') }}">
@@ -116,7 +145,7 @@
                     <span class="nav-link-text ms-1">Tables</span>
                 </a>
             </li> --}}
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'tables' ? ' active bg-gradient-primary' : '' }} "
                     href="{{ url('dashboard/table_student') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -134,7 +163,7 @@
                     </div>
                     <span class="nav-link-text ms-1">All teacher</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'billing' ? ' active bg-gradient-primary' : '' }}  "
                     href="{{ route('billing') }}">

@@ -45,7 +45,7 @@ class CoursesController extends Controller
 
         ]);
         $Cours->save();
-        return $request->all();
+        return back();
     }
 
     /**
@@ -86,6 +86,7 @@ class CoursesController extends Controller
             'price'=>$request->price,
             'description'=>$request->description,
         ]);
+        return back();
     }
 
     /**

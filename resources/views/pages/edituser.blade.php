@@ -87,46 +87,52 @@
                                     </div>
                                 </div>
                         @endif
-                        <form method='POST' action='{{ url('dashboard/teacheradd') }}'>
+                        <form method='POST' action='{{url('dashboard/user-management',$user->id) }}'>
                             @csrf
-                            @method('POST')
-                             <div class="row">
+                            @method('PUT')
+                            <div class="row">
 
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">name</label>
-                                    <input type="text" name="name" class="form-control border border-2 p-2" >
-                                    @error('name')
-                                <p class='text-danger inputerror'>{{ $message }} </p>
-                                @enderror
-                                </div>
-
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label">email</label>
-                                    <input type="text" name="email" class="form-control border border-2 p-2" >
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" name="email" value="{{$user->email}}" class="form-control border border-2 p-2" >
                                     @error('email')
                                 <p class='text-danger inputerror'>{{ $message }} </p>
                                 @enderror
                                 </div>
 
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">phone</label>
-                                    <input type="text" name="phone" class="form-control border border-2 p-2" >
+                                    <label class="form-label">Name</label>
+                                    <input type="text" name="name"  value="{{$user->name}}" class="form-control border border-2 p-2" >
+                                    @error('name')
+                                <p class='text-danger inputerror'>{{ $message }} </p>
+                                @enderror
+                                </div>
+
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">role_id</label>
+                                    <input type="number" name="phone" value="{{$user->role_id}}" class="form-control border border-2 p-2" >
                                     @error('phone')
                                     <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">password</label>
-                                    <input type="text" name="password" class="form-control border border-2 p-2" >
-                                    @error('password')
+                                    <label class="form-label">Location</label>
+                                    <input type="text" name="location" class="form-control border border-2 p-2" value='{{ old('location', auth()->user()->location) }}'>
+                                    @error('location')
                                     <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
 
-
-
-
+                                <div class="mb-3 col-md-12">
+                                    <label for="floatingTextarea2">About</label>
+                                    <textarea class="form-control border border-2 p-2"
+                                        placeholder=" Say something about yourself" id="floatingTextarea2" name="about"
+                                        rows="4" cols="50">{{ old('about', auth()->user()->about) }}</textarea>
+                                        @error('about')
+                                        <p class='text-danger inputerror'>{{ $message }} </p>
+                                        @enderror
+                                </div>
                             </div>
                             <button type="submit" class="btn bg-gradient-dark">Submit</button>
                         </form>

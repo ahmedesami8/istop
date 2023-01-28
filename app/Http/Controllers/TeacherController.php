@@ -56,7 +56,7 @@ class TeacherController extends Controller
             'user_id'=>$user->id,
         ]);
         $teacher->save();
-        return $request->all();
+        return back();
     }
 
     /**
@@ -107,6 +107,7 @@ class TeacherController extends Controller
             'phone'=>$request->phone,
             'user_id'=>$user->id,
         ]);
+        return back();
 
 
 

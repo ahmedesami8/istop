@@ -9,6 +9,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -39,6 +40,10 @@ use App\Http\Controllers\ClassroomController;
   Route::resource('/teacheradd',TeacherController::class);
   Route::resource('/classesadd',ClassroomController::class);
   Route::resource('/register',TeacherController::class);
+  Route::resource('/user-management', UserController::class);
+
+
+
 
  });
  Route::get('/index',[PageController::class,'index']);
@@ -65,7 +70,7 @@ use App\Http\Controllers\SessionsController;
 
 
 Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('sign-up', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('sign-up', [RegisterController::class, 'store'])->middleware('guest');
 Route::get('sign-in', [SessionsController::class, 'create'])->middleware('guest')->name('login');
@@ -104,9 +109,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('static-sign-up', function () {
 		return view('pages.static-sign-up');
 	})->name('static-sign-up');
-	Route::get('user-management', function () {
-		return view('pages.laravel-examples.user-management');
-	})->name('user-management');
+
 	Route::get('user-profile', function () {
 		return view('pages.laravel-examples.user-profile');
 	})->name('user-profile');

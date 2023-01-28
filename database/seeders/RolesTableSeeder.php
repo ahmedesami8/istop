@@ -20,18 +20,35 @@ class RolesTableSeeder extends Seeder
             'name' => 'Super Admin',
             'rank'=> 1
 
-        ],[
+        ]);
+        DB::table('roles')->insert([
+
+
             'name' => 'Admin',
             'rank'=> 2
-        ],[
+
+        ]);
+        DB::table('roles')->insert([
+
+
             'name' => 'Manager',
             'rank'=> 3
-        ],[
+
+        ]);
+        DB::table('roles')->insert([
+
+
             'name' => 'Teacher',
             'rank'=> 4
-        ],[
+
+        ]);
+        DB::table('roles')->insert([
+
+
             'name' => 'Student ',
             'rank'=> 5
+
         ]);
+
     }
 }

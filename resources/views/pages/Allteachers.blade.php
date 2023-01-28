@@ -42,11 +42,24 @@
                                     <td>{{$table_teacher->user->password}}</td>
                                     <td>
 
-                                        <form action="{{url('dashboard/teacheradd',$table_teacher->id)}}" method="POST">
+                                        {{-- <form action="{{url('dashboard/teacheradd',$table_teacher->id)}}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <a class="btn btn-primary" href="{{route('admin.teacheradd.edit',$table_teacher->id)}}" role="button">edit</a>
                                             <button type="submit" class="btn btn-primary">delete</button>
+
+                                        </form> --}}
+                                        <form action="{{url('dashboard/teacheradd',$table_teacher->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a rel="tooltip" class="btn btn-success btn-link"
+                                                    href="{{route('admin.teacheradd.edit',$table_teacher->id)}}" data-original-title=""
+                                                    title="">
+                                                    <i class="material-icons">edit</i>
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            <button type="submit" class="btn btn-danger btn-link"><i class="material-icons">close</i>
+                                                <div class="ripple-container"></div></button>
 
                                         </form>
                                     </td>

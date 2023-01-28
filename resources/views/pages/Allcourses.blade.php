@@ -29,7 +29,7 @@
                                                 descripion</th>
 
                                         </tr>
-                                    </thead>
+
                                 </thead>
                                 @foreach($table_courses as $table_course)
                                 <tr>
