@@ -36,6 +36,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $attributes = request()->validate([
+            'email' => 'required|email|unique:users,email,',
+            'name' => 'required',
+            'phone' => 'required|max:10',
+            'about' => 'required:max:150',
+            'location' => 'required'
+        ]);
 
         $user = new User([
             'email' => $request->email,
@@ -85,13 +92,13 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         // $user = request()->user();
-        // $attributes = request()->validate([
-        //     'email' => 'required|email|unique:users,email,'.$user->id,
-        //     'name' => 'required',
-        //     'phone' => 'required|max:10',
-        //     'about' => 'required:max:150',
-        //     'location' => 'required'
-        // ]);
+        $attributes = request()->validate([
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'name' => 'required',
+            'phone' => 'required|max:10',
+            'about' => 'required:max:150',
+            'location' => 'required'
+        ]);
 
         // auth()->user()->update($attributes);
         // return back()->withStatus('Profile successfully updated.');

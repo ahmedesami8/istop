@@ -37,6 +37,15 @@ class CoursesController extends Controller
      */
     public function store(Request $request)
     {
+        $attributes = request()->validate([
+            'title' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
+            'price' => 'required|max:255',
+            'description'   => 'required|max:255',
+
+
+
+        ]);
 
         $Cours = new Courses([
             'title'=>$request->title,

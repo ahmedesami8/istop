@@ -48,6 +48,15 @@ class ClassroomController extends Controller
      */
     public function store(Request $request)
     {
+        $attributes = request()->validate([
+            'name' => 'required|max:255',
+            'teachers_id' => 'required|min:5|max:255',
+            'password' => 'required|max:255',
+            'description'   => 'required|max:255',
+            'course_id'=>'required|max:255'
+
+
+        ]);
 
         $Classroom = new Classroom([
             'name'=>$request->name,

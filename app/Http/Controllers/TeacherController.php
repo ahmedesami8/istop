@@ -44,6 +44,16 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
+
+        $attributes = request()->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|min:5|max:255',
+            'role_id'   => 'sometimes',
+            'phone'=>'required|min:5|max:255'
+
+
+        ]);
         $user = new User([
             'name'=>$request->name,
             'email'=>$request->email,
@@ -93,6 +103,15 @@ class TeacherController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $attributes = request()->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|min:5|max:255',
+            'role_id'   => 'sometimes',
+            'phone'=>'required|min:5|max:255'
+
+
+        ]);
         $user=User::find($id);
         $Teacher=Teacher::find($id);
 
